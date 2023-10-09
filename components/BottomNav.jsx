@@ -54,7 +54,7 @@ const NavButton = styled.button`
 
 const ButtonText = styled.span`
   margin-left:8px;  
-  font-size:13px;  
+  font-size:14px;  
   font-weight:400;
   color:#303189
 `;

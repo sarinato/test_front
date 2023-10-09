@@ -80,7 +80,7 @@ const ImageWithOverlay = styled.div`
   }
 
   .title {
-    font-size: 26px;
+    font-size: 25px;
     font-weight: 700;    
   }
 
