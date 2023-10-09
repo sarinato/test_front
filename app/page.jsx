@@ -185,8 +185,7 @@ const Home = () => {
     const fetchData = async () => {
       try{
           const response = await fetch('https://apigenerator.dronahq.com/api/Fu2aiuqv/data')
-          const data = await response.json()          
-          console.log(data[0])
+          const data = await response.json()                    
           setContent(data[0])
 
       }catch (error){
