@@ -63,7 +63,6 @@ const inactiveTxtStyles = {
   color: "#909090",
 };
 
-// ... (other imports)
 
 const NavButton = styled.button`
   border: none;
@@ -75,10 +74,6 @@ const NavButton = styled.button`
   width: 123px;
   height: 45px;
   ${(props) => (props.$isActive ? activeBgStyles : inactiveBgStyles)};
-`;
-
-const Icon = styled.div`
-  ${(props) => (props.$isActive ? activeTxtStyles : inactiveTxtStyles)};
 `;
 
 const Image = styled.img`
@@ -118,27 +113,29 @@ const Nav = () => {
       <NavBarContainer>
         <NavBar>
           <NavButton onClick={() => handleButtonClick("Magasins")} $isActive={activeButton === "Magasins"}>
-            <Icon $isActive={activeButton === "Magasins"}>
-              <FaBagShopping size={13} />
-            </Icon>
+            
+            <div style={activeButton === "Magasins" ? activeTxtStyles : inactiveTxtStyles} >
+              <FaBagShopping size={13} style={activeButton === "Magasins" ? activeTxtStyles : inactiveTxtStyles} />
+            </div>
             <span style={{ marginLeft: 6, fontSize: 14, fontWeight: 300, ...(activeButton === "Magasins" ? activeTxtStyles : inactiveTxtStyles) }}>
               Magasins
             </span>
           </NavButton>
 
           <NavButton onClick={() => handleButtonClick("Restauration")} $isActive={activeButton === "Restauration"}>
-            <Icon $isActive={activeButton === "Restauration"}>
-              <RiRestaurant2Fill size={16} />
-            </Icon>
+            
+            <div style={activeButton === "Restauration" ? activeTxtStyles : inactiveTxtStyles} >
+              <RiRestaurant2Fill size={16} style={activeButton === "Restauration" ? activeTxtStyles : inactiveTxtStyles} />
+            </div>
             <span style={{ marginLeft: 6, fontSize: 14, fontWeight: 300, ...(activeButton === "Restauration" ? activeTxtStyles : inactiveTxtStyles) }}>
               Restauration
             </span>
           </NavButton>
 
           <NavButton onClick={() => handleButtonClick("Informations")} $isActive={activeButton === "Informations"}>
-            <Icon $isActive={activeButton === "Informations"}>
+            <div style={activeButton === "Informations" ? activeTxtStyles : inactiveTxtStyles} >
               <RiInformationFill size={13} />
-            </Icon>
+            </div>            
             <span style={{ marginLeft: 6, fontSize: 14, fontWeight: 300, ...(activeButton === "Informations" ? activeTxtStyles : inactiveTxtStyles) }}>
               Informations
             </span>
@@ -150,4 +147,3 @@ const Nav = () => {
 };
 
 export default Nav;
-
