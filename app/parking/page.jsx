@@ -1,7 +1,5 @@
 'use client'
 import styled from 'styled-components';
-import { useEffect, useState } from 'react';
-import ThinProgressBar from '@components/ThinProgressBar';
 
 const HomeContainer = styled.div`  
   width:100%;
