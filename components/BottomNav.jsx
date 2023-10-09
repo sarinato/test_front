@@ -86,7 +86,7 @@ const BottomNav = () => {
             <Icon>
               <IoMdHome size={23} />
             </Icon>
-            {activeButton === 'Acceuil' && <ButtonText>Aceil</ButtonText>}
+            {activeButton === 'Acceuil' && <ButtonText>Accueil</ButtonText>}
           </NavButton>
 
           <NavButton onClick={() => handleButtonClick("Parking")} $isActive={activeButton === "Parking"}>
