@@ -133,11 +133,14 @@ const SecondHome = () => {
 
   return (
     <HomeContainer>
-      <Title>PARKING GRATUIT<span >1 HEURE</span></Title>      
+      <h1 style={{ fontWeight: 900, letterSpacing: '0.4px', color: '#303189', ...firstTitle }}>
+        PARKING GRATUIT
+        <span style={{ display: 'block', marginTop: '-7px', textAlign: 'center', fontWeight: 400, fontSize: '30px' }}>1 HEURE</span>
+      </h1>
 
-      <StyledImage src="/assets/gray.jpeg" alt="Your Image Alt Text" />
-    
-      <Title $titleOrder={'second'}>ÉVÉNEMENTS TENDANCE</Title>
+      <img src="/assets/gray.jpeg" alt="Your Image Alt Text" style={{ width: '374px', height: '300px', objectFit: 'cover' }} />
+
+      <h1 style={{ fontWeight: 900, letterSpacing: '0.4px', color: '#303189', ...secondTitle }}>ÉVÉNEMENTS TENDANCE</h1>
 
       <HorizontalScrollContainer>
         <HorizontalImage $isMiddle={false}>
