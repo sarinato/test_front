@@ -201,7 +201,11 @@ const Feed = () => {
 
   return (
     <HomeContainer>
-      <Title>{content.page_title}</Title>
+      {/* <Title>{content.page_title}</Title> */}
+
+      <h1 style={{ marginBottom: '45px',marginTop: '27px',fontSize: '30px',fontWeight: 900, letterSpacing: '0.4px', color: '#303189' }}>
+        {content.page_title}
+      </h1>
 
       <ImageWithOverlay>
         <img src={content.cover_image} alt="Your Image Alt Text" />
