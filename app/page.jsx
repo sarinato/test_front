@@ -200,8 +200,7 @@ const Feed = () => {
 
 
   return (
-    <HomeContainer>
-      {/* <Title>{content.page_title}</Title> */}
+    <HomeContainer>      
 
       <h1 style={{ marginBottom: '45px',marginTop: '27px',fontSize: '30px',fontWeight: 900, letterSpacing: '0.4px', color: '#303189' }}>
         {content.page_title}
@@ -222,7 +221,9 @@ const Feed = () => {
         <span style={{fontWeight:400, fontSize:'18px'}}>Voir toutes les actualités</span>
       </Button>
 
-      <Title $titleOrder={'second'}>ÉVÉNEMENTS TENDANCE</Title>
+      <h1 style={{ marginBottom: '25px',marginTop: '52px',fontSize: '25px',fontWeight: 900, letterSpacing: '0.4px', color: '#303189' }}>
+        ÉVÉNEMENTS TENDANCE
+      </h1>
 
       <HorizontalScrollContainer>
         <HorizontalImage $isMiddle={false}>
