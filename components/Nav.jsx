@@ -45,6 +45,11 @@ const NavBar = styled.div`
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 `;
 
+const Image = styled.img`
+  width: 50px;
+  height: 50px;
+`;
+
 const activeBgStyles = {
   backgroundColor: "#303189",
   color: "#ffffff",
@@ -63,23 +68,26 @@ const inactiveTxtStyles = {
   color: "#909090",
 };
 
+const NavButton = ({ onClick, $isActive, children }) => {
+  const buttonStyles = {
+    border: 'none',
+    padding: '10px 12px 8px 20px',
+    cursor: 'pointer',
+    display: 'flex',
+    alignItems: 'center',
+    borderRadius: '30px',
+    width: '123px',
+    height: '45px',
+    ...($isActive ? activeBgStyles : inactiveBgStyles),
+  };
 
-const NavButton = styled.button`
-  border: none;
-  padding: 10px 12px 8px 20px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  border-radius: 30px;
-  width: 123px;
-  height: 45px;
-  ${(props) => (props.$isActive ? activeBgStyles : inactiveBgStyles)};
-`;
+  return (
+    <button onClick={onClick} style={buttonStyles}>
+      {children}
+    </button>
+  );
+};
 
-const Image = styled.img`
-  width: 50px;
-  height: 50px;
-`;
 
 const Nav = () => {
   const [activeButton, setActiveButton] = useState('Magasins');
