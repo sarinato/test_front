@@ -95,7 +95,25 @@ const Nav = () => {
 
   return (
     <>
-      {/* ... (LogoBarContainer and LogoBar components) */}
+      <LogoBarContainer>
+        <LogoBar>
+          <div style={{ width:'30%'}}>
+            <div style={{ display: 'inline-block', marginRight:50, marginTop:9 }}>
+              <PiDotsThreeVerticalBold color='#303189' size={45} />
+            </div>
+          </div>
+
+          <div style={{ width:'30%', paddingTop:14, paddingLeft:17}}>
+            <img src="/assets/logo.png" alt="" width={90} height={90}/>
+          </div>
+
+          <div style={{ width:'30%', display: 'flex', alignItems: 'center' ,paddingLeft:27, paddingBottom:3}}>            
+            <LiaSearchSolid size={24} color='#303189' style={{ marginRight: '10px' }} />
+            <Image src="/assets/qrcode.png" alt="Your Image Alt Text"  />
+          </div>
+
+        </LogoBar>
+      </LogoBarContainer>
 
       <NavBarContainer>
         <NavBar>
