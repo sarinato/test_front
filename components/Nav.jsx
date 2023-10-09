@@ -63,6 +63,8 @@ const inactiveTxtStyles = {
   color: "#909090",
 };
 
+// ... (other imports)
+
 const NavButton = styled.button`
   border: none;
   padding: 10px 12px 8px 20px;
@@ -75,52 +77,25 @@ const NavButton = styled.button`
   ${(props) => (props.$isActive ? activeBgStyles : inactiveBgStyles)};
 `;
 
-const ButtonText = styled.span`
-  margin-left:6px;  
-  font-size:14px;  
-  font-weight:300;
-  ${(props) => (props.$isActive ? activeTxtStyles : inactiveTxtStyles)};
-`;
-
 const Icon = styled.div`
   ${(props) => (props.$isActive ? activeTxtStyles : inactiveTxtStyles)};
 `;
 
 const Image = styled.img`
-  width:50px;
-  height:50px
+  width: 50px;
+  height: 50px;
 `;
 
-
 const Nav = () => {
-
   const [activeButton, setActiveButton] = useState('Magasins');
 
   const handleButtonClick = (buttonName) => {
     setActiveButton(buttonName);
   };
-  
+
   return (
     <>
-      <LogoBarContainer>
-        <LogoBar>
-          <div style={{ width:'30%'}}>
-            <div style={{ display: 'inline-block', marginRight:50, marginTop:9 }}>
-              <PiDotsThreeVerticalBold color='#303189' size={45} />
-            </div>
-          </div>
-
-          <div style={{ width:'30%', paddingTop:14, paddingLeft:17}}>
-            <img src="/assets/logo.png" alt="" width={90} height={90}/>
-          </div>
-
-          <div style={{ width:'30%', display: 'flex', alignItems: 'center' ,paddingLeft:27, paddingBottom:3}}>            
-            <LiaSearchSolid size={24} color='#303189' style={{ marginRight: '10px' }} />
-            <Image src="/assets/qrcode.png" alt="Your Image Alt Text"  />
-          </div>
-
-        </LogoBar>
-      </LogoBarContainer>
+      {/* ... (LogoBarContainer and LogoBar components) */}
 
       <NavBarContainer>
         <NavBar>
@@ -128,21 +103,27 @@ const Nav = () => {
             <Icon $isActive={activeButton === "Magasins"}>
               <FaBagShopping size={13} />
             </Icon>
-            <ButtonText $isActive={activeButton === "Magasins"}>Magasins</ButtonText>
+            <span style={{ marginLeft: 6, fontSize: 14, fontWeight: 300, ...(activeButton === "Magasins" ? activeTxtStyles : inactiveTxtStyles) }}>
+              Magasins
+            </span>
           </NavButton>
 
           <NavButton onClick={() => handleButtonClick("Restauration")} $isActive={activeButton === "Restauration"}>
             <Icon $isActive={activeButton === "Restauration"}>
               <RiRestaurant2Fill size={16} />
             </Icon>
-            <ButtonText $isActive={activeButton === "Restauration"}>Restauration</ButtonText>
+            <span style={{ marginLeft: 6, fontSize: 14, fontWeight: 300, ...(activeButton === "Restauration" ? activeTxtStyles : inactiveTxtStyles) }}>
+              Restauration
+            </span>
           </NavButton>
 
           <NavButton onClick={() => handleButtonClick("Informations")} $isActive={activeButton === "Informations"}>
             <Icon $isActive={activeButton === "Informations"}>
               <RiInformationFill size={13} />
             </Icon>
-            <ButtonText $isActive={activeButton === "Informations"}>Informations</ButtonText>
+            <span style={{ marginLeft: 6, fontSize: 14, fontWeight: 300, ...(activeButton === "Informations" ? activeTxtStyles : inactiveTxtStyles) }}>
+              Informations
+            </span>
           </NavButton>
         </NavBar>
       </NavBarContainer>
@@ -151,3 +132,4 @@ const Nav = () => {
 };
 
 export default Nav;
+
