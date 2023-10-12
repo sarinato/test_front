@@ -12,11 +12,6 @@ const robotoRegular = Roboto({
   weight:['300','400','900','500','700']
 })
 
-// export const metadata = {
-//  title: 'test_frontend',
-//  description : 'pixel perfect test_front details'   
-// }
-
 
 const AppContainer = styled.div`
   width: 414px;
