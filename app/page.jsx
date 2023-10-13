@@ -170,13 +170,13 @@ const Feed = () => {
 
   const [content, setContent] = useState(
     {
-      page_title:'',
-      cover_image:'',
-      cover_title:'',
-      cover_details:'',
-      gallery_image:'',
-      gallery_date:'',
-      gallery_title:''
+      page_title:'...loading',
+      cover_image:'/assets/gray.jpeg',
+      cover_title:'...loading',
+      cover_details:'...loading',
+      gallery_image:'/assets/gray.jpeg',
+      gallery_date:'...loading',
+      gallery_title:'...loading'
     }
   )
 
