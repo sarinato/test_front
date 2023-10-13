@@ -23,8 +23,7 @@ const secondTitle = {
 }
 
 const Title = styled.h1` 
-  font-weight: 900;
-  letter-spacing: 0.4px;
+  font-weight: 900;  
   ${(props) => (props.$titleOrder ==='second' ? secondTitle : firstTitle )}
   color: #303189;
 `;
@@ -203,7 +202,7 @@ const Feed = () => {
   return (
     <HomeContainer>      
 
-      <h1 style={{ marginBottom: '45px',marginTop: '27px',fontSize: '30px',fontWeight: 900, letterSpacing: '0.4px', color: '#303189' }}>
+      <h1 style={{ marginBottom: '45px',marginTop: '27px',fontSize: '30px',fontWeight: 900, color: '#303189' }}>
         {content.page_title}
       </h1>
 
@@ -222,7 +221,7 @@ const Feed = () => {
         <span style={{fontWeight:400, fontSize:'18px'}}>Voir toutes les actualités</span>
       </Button>
 
-      <h1 style={{ marginBottom: '25px',marginTop: '52px',fontSize: '25px',fontWeight: 900, letterSpacing: '0.4px', color: '#303189' }}>
+      <h1 style={{ marginBottom: '25px',marginTop: '52px',fontSize: '25px',fontWeight: 900, color: '#303189' }}>
         ÉVÉNEMENTS TENDANCE
       </h1>
 

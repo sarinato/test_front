@@ -23,8 +23,7 @@ const secondTitle = {
 }
 
 const Title = styled.h1` 
-  font-weight: 900;
-  letter-spacing: 0.4px;
+  font-weight: 900;  
   ${(props) => (props.$titleOrder ==='second' ? secondTitle : firstTitle )}
   color: #303189;
 `;

@@ -22,8 +22,7 @@ const secondTitle = {
 }
 
 const Title = styled.h1` 
-  font-weight: 900;
-  letter-spacing: 0.4px;
+  font-weight: 900;  
   ${(props) => (props.$titleOrder ==='second' ? secondTitle : firstTitle )}
   color: #303189;
 
@@ -133,14 +132,14 @@ const SecondHome = () => {
 
   return (
     <HomeContainer>
-      <h1 style={{ fontWeight: 900, letterSpacing: '0.4px', color: '#303189', ...firstTitle }}>
+      <h1 style={{ fontWeight: 900, color: '#303189', ...firstTitle }}>
         PARKING GRATUIT
         <span style={{ display: 'block', marginTop: '-7px', textAlign: 'center', fontWeight: 400, fontSize: '30px' }}>1 HEURE</span>
       </h1>
 
       <img src="/assets/gray.jpeg" alt="Your Image Alt Text" style={{ width: '374px', height: '300px', objectFit: 'cover' }} />
 
-      <h1 style={{ fontWeight: 900, letterSpacing: '0.4px', color: '#303189', ...secondTitle }}>ÉVÉNEMENTS TENDANCE</h1>
+      <h1 style={{ fontWeight: 900, color: '#303189', ...secondTitle }}>ÉVÉNEMENTS TENDANCE</h1>
 
       <HorizontalScrollContainer>
         <HorizontalImage $isMiddle={false}>
