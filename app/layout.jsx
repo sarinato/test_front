@@ -5,12 +5,13 @@ import Nav from '@components/Nav'
 import BottomNav from '@components/BottomNav'
 import styled from 'styled-components';
 import {Roboto} from 'next/font/google'
-
+import StyledComponentsRegistry from './registry'
 
 const robotoRegular = Roboto({
   subsets:["latin"],  
   weight:['300','400','900','500','700']
 })
+
 
 
 const AppContainer = styled.div`
@@ -25,14 +26,18 @@ const RootLayout = ({children}) => {
     <html lang='en'>
 
       <body className={robotoRegular.className}>
-          <main className='app'>   
-            <AppContainer>
+          <main className='app'> 
+          <StyledComponentsRegistry>
 
-              <Nav />     
-              {children}
-              <BottomNav/>
+              <AppContainer>
 
-            </AppContainer>                              
+                <Nav />     
+                {children}
+                <BottomNav/>
+
+              </AppContainer>   
+              
+            </StyledComponentsRegistry>                             
           </main>
       </body>
     </html>
