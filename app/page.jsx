@@ -44,7 +44,8 @@ const Button = styled.button`
 
 const ImageWithOverlay = styled.div`
   position: relative;
-
+  width: 374px;
+  height: 300px;
 
   img {
     width: 100%;
@@ -207,7 +208,7 @@ const Feed = () => {
       </h1>
 
       <ImageWithOverlay>
-        <img src={content.cover_image} alt="Your Image Alt Text" />
+        <img src={content.cover_image} alt="AnfaPlace Mall" />
 
         <div className="overlay-content">
           <div className="title">{content.cover_title}</div>
@@ -227,21 +228,21 @@ const Feed = () => {
 
       <HorizontalScrollContainer>
         <HorizontalImage $isMiddle={false}>
-          <img src={content.gallery_image} alt="Description" />
+          <img src={content.gallery_image} alt="AnfaPlace Mall" />
             <div className="overlay-content">
             <div className="title">{content.gallery_title}</div>
             <div className="text">{content.gallery_date}</div>
           </div>
         </HorizontalImage>
         <HorizontalImage $isMiddle={true}>
-          <img src={content.gallery_image} alt="Description" />
+          <img src={content.gallery_image} alt="AnfaPlace Mall" />
           <div className="overlay-content">
             <div className="title">{content.gallery_title}</div>
             <div className="text">{content.gallery_date}</div>
           </div>
         </HorizontalImage>
         <HorizontalImage $isMiddle={false}>        
-          <img src={content.gallery_image} alt="Description" />
+          <img src={content.gallery_image} alt="AnfaPlace Mall" />
           <div className="overlay-content">
             <div className="title">{content.gallery_title}</div>
             <div className="text">{content.gallery_date}</div>
